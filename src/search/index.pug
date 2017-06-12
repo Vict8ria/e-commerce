@@ -1,0 +1,49 @@
+extends ../layout
+
+block head
+	+head({ link: 'search/'}, 'Search results')
+
+block menu
+	+menu('')
+
+block body
+	section.category
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				span.breadcrumbs--item Search results
+		.section-header
+			h2.header-name Search results for: jacket
+			p.header-text 4 Items
+		.section-main.category--item
+			.products-list
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/1.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/2.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/3.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/4.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+	section.slider
+		h3.slider-name Check our lookbook
+		include ../slider.pug		
+
+			

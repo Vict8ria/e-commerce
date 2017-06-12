@@ -1,0 +1,121 @@
+extends ../../layout
+
+block head
+	+head({ link: 'category/men/'}, 'Men')
+
+block menu
+	+menu('men')
+
+block body
+	section.products
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				span.breadcrumbs--item Men
+		.section-header
+			h2.header-name Men
+			p.header-text All products
+		.section-main
+			.products-options
+				select.option--item
+					option Price
+					option 20 - 30
+					option 30 - 50
+					option 50 - 100
+					option 100 and more
+				select.option--item
+					option Size
+					option 20 - 30
+					option 30 - 50
+					option 50 - 100
+					option 100 and more
+				select.option--item
+					option Colour
+					option 20 - 30
+					option 30 - 50
+					option 50 - 100
+					option 100 and more
+			.products-list
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/1.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/2.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/3.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/4.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/5.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/6.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/7.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/8.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/9.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/10.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/11.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+				a.product--item(href="#")
+					.product-image
+						img.image-big(src="/assets/img/products/man/12.jpg")
+					.product-info
+						.product-name Double-Layered Top
+						.product-price € 89,95
+			.pagination
+				a.page.active(href="#") 1
+				a.page(href="#") 2
+				a.page(href="#") 3
+				a.page(href="#") 4
+	section.slider
+		h3.slider-name Check our lookbook
+		include ../../slider.pug		
+
+			

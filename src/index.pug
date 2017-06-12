@@ -1,0 +1,76 @@
+extends layout
+
+block head
+	+head({})
+
+block menu
+	+menu
+
+block body
+	section.store
+		.section-header
+			h1 Hazy Shade of spring
+			p.header-text Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.
+			a.button-border(href="#") Check new arrivals
+		.section-main.store--grid
+			.store-items.left
+				a.box(href='#')
+					.content.content-double
+						p Heather grey basics
+							span New arrival
+					img.box-image(src="/assets/img/clothes/1.jpg")
+				.box.bg-color-light
+					.content
+						blockquote.blockquote
+							| Opening Ceremony @IndonesiaFW tomorrow, PMers! Are you ready for the biggest fashion movement in
+						cite.cite @PuspitaMarthaID 
+				a.box(href='#')
+					.content.content-large
+						p Chuck taylors
+							span $ 125.00
+					img.box-image(src="/assets/img/clothes/2.jpg")
+				a.box(href='#')
+					img.box-image(src="/assets/img/clothes/3.jpg")
+				.box.bg-color-dark
+					.content.content-large 
+						.arrow
+						p Jaxon Hat
+							span Beanie Hat
+			.store-items.right
+				a.box(href='#')
+					img.box-image(src="/assets/img/clothes/4.jpg")
+				.box.bg-color-dark
+					.content.content-large 
+						.arrow
+						p Elegant shoes
+							span Braided leather
+				.box.bg-color-light
+					.content
+						blockquote.blockquote
+							| Girls, Girls, Girls: A Look Back at 50 Years of the Pirelli Calendar
+						cite.cite @Vogue 
+				a.box(href='#')
+					.content.content-double
+						p Jeans for adventure
+							span New Arrival
+					img.box-image(src="/assets/img/clothes/5.jpg")
+				a.box(href='#')
+					.content.content-large
+						p Basic blazer
+							span from $ 199.00
+					img.box-image(src="/assets/img/clothes/6.jpg")
+	section.distribution
+		.section-header.distribution-header
+			h2.header-name Sign up to receive our updates
+			p.header-text
+				| Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.
+		.section-main
+			form.form-wrapper.distribution-form(action="", method="post")
+				input.input.distribution-input(type="email", name="email", placeholder="Your Email")
+				button.input-button Add
+	section.slider
+		include slider.pug
+
+
+
+

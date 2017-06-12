@@ -1,0 +1,111 @@
+.category {
+	&--item {
+		.products-list {
+			grid-template-rows: 1fr;
+			@media (max-width: $mobile-width) {
+				grid-template-columns: 205px 205px;
+				grid-template-rows: 1fr 1fr;
+				justify-content: space-around;
+			}
+		}
+	}
+}
+
+.products {
+	.products-list {
+		grid-template-rows: 1fr 1fr 1fr;
+		@media only screen and (max-width: $tablet-small-width) {
+			grid-template-columns: 205px 205px 205px;
+			grid-template-rows: 1fr 1fr 1fr 1fr;
+		}
+		@media (max-width: $mobile-mid-width) {
+			grid-template-columns: 205px 205px;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+			justify-content: space-around;
+		}
+		@media only screen and (max-width: 500px) {
+			grid-template-columns: 205px;
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1 fr 1fr 1fr 1fr;
+		}
+	}
+	.section-main {
+		margin-bottom: 0px;
+	}
+}
+
+.products-options {
+	margin: 80px auto;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	@media (max-width: $mobile-mid-width) {
+		flex-direction: column;
+	}
+	@media only screen and (max-width: 480px) {
+		grid-template-columns: 205px;
+		grid-template-rows: 1fr 1fr 1fr 1fr;
+	}
+	.option--item {
+		width: 172px;
+		background-image: url('../img/icons/arrow.svg');
+		height: 26px;
+		background-position: right center;
+		background-repeat: no-repeat;
+		line-height: 1em;
+		text-indent: 0.01px; 
+		text-overflow: '';
+		border: none;
+		box-sizing: border-box;
+		margin: 0 20px;
+		padding-bottom: 5px;
+		border-bottom: 1px solid #303030;
+		appearance: none!important;
+		color: #606060;
+		font-style: italic;
+		display: inline-block;
+		&::-ms-expand {
+			display: none;
+		}
+		@media (max-width: $mobile-mid-width) {
+			margin: 0 auto 25px;
+			width: 250px;
+		}
+	}
+}
+
+.products-list {
+	display: grid;
+	grid-template-columns: 205px 205px 205px 205px;
+	justify-content: space-between;
+	grid-column-gap: auto;
+	grid-row-gap: 75px;
+	font-size: 14px;
+	.product--item {
+		width: 205px;
+		border: 1px solid #fff;
+		text-decoration: none;
+		box-sizing: border-box;
+		&:hover .product-image img {
+			transform: scale(1.05,1.05);
+		}
+		.product-image {
+			width: 205px;
+			height: 255px;
+			overflow: hidden;
+			img {
+				transition: transform .5s;
+			}
+		}
+		.product-info{
+			text-align: center;
+			color: #303030;
+			.product-name {
+				font-weight: 700;
+				margin-top: 20px;
+			}
+			.product-price {
+				margin-top: 8px;
+			}
+		}
+	}
+}

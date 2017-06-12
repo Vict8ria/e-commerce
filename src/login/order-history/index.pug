@@ -1,0 +1,64 @@
+extends ../../layout
+
+block head
+	+head({ link: 'login/order-history/'}, 'Order History')
+
+block menu
+	+menu()
+
+block body
+	section.order-history
+		.section-header
+			h2.header-name 
+				| Hi Michal,
+				br
+				| this is your Order history
+			a.button-border(href="edit-account/") Edit your account
+		.section-main
+			table.table.order-history--table
+				tr.sections--table
+					th.section-name.order-no--table Order no
+					th.section-name.order-data--table Order data
+					th.section-name.products--table Products
+					th.section-name.status--table Status
+					th.section-name.ship-date--table Ship date
+					th.section-name.total-amount--table Total amount
+				tr.product-items
+					td.product-item #28364
+					td.product-item 21/05/2014
+					td.product-item.column
+						.product-info.inline
+							.product-image
+								img.image-small(src="/assets/img/products/man/2.jpg")
+							.product-description
+								.product-name Floral plimsoll
+								.product-article Ref. 2514/302	
+						.product-info.inline
+							.product-image
+								img.image-small(src="/assets/img/products/man/6.jpg")
+							.product-description
+								.product-name Coated 5 Pocket Trousers
+								.product-article Ref. 8246/044
+						.product-info.inline
+							.product-image
+								img.image-small(src="/assets/img/products/man/8.jpg")
+							.product-description
+								.product-name Oversized studio blouse
+								.product-article Ref. 2401/657
+					td.product-item Open
+					td.product-item 22/05/2014
+					td.product-item.total-amount--table €345.00
+				tr.product-items
+					td.product-item #28365
+					td.product-item 11/05/2014
+					td.product-item.column
+						.product-info.inline
+							.product-image
+								img.image-small(src="/assets/img/products/man/12.jpg")
+							.product-description
+								.product-name Dress with knot at the back
+								.product-article Ref. 7583/890	
+					td.product-item Paid
+					td.product-item 13/05/2014
+					td.product-item.total-amount--table €105.00
+			span.more-button Show me more items

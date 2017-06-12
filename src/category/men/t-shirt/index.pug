@@ -1,0 +1,33 @@
+extends ../../../layout
+
+block head
+	+head({ link: 'category/men/t-shirt/'}, '')
+
+block menu
+	+menu('')
+
+block body
+	section
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Men 
+			li.breadcrumbs--items
+				span.breadcrumbs--item T-shirts
+		.section-header
+			h2.header-name T-shirts
+			p.header-text No products in this category
+		.section-main.text-style
+			p 
+				| Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. 
+				br
+				| Maecenas malesuada elit lectus felis, malesuada ultricies.
+			p Please try to find something in 
+				span.main-color Trousers, 
+				span.main-color Jakets 
+				| and 
+				span.main-color Foot Wear 
+	section.slider
+		h3.slider-name You may also like
+		include ../../../slider.pug	

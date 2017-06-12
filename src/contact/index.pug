@@ -1,0 +1,38 @@
+extends ../layout
+
+block head
+	+head({ link: 'contact/'}, 'Contact')
+
+block menu
+	+menu('')
+
+block body
+	section.contact
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				span.breadcrumbs--item Contact
+		.section-header
+			h2.header-name Contact
+			p.header-text Lorem ipsum dolor sit amet enim. Etiam ullamcorp uspendisse a pellentesque.
+		.section-main
+			form.contact-form.form-wrapper
+				.col-wrap.column
+					label.label Topic
+					select.select
+						option Lorem ipsum
+				.col-wrap.m-column
+					.col-small.column.col2-4
+						label.label(for="name") Name
+						input.input#name
+					.col-small.column.col2-4
+						label.label(for="last-name") E-mail
+						input.input#email
+				.col-wrap.column.no-margin
+						label.label Message
+						textarea.textarea
+				button.button Send
+	section.slider
+		h3.slider-name You may also like
+		include ../slider.pug	

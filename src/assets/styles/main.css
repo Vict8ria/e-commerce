@@ -1,0 +1,44 @@
+@import 'variables.css';
+@import 'partials/vendors/normalize.css';
+@import 'partials/vendors/typography.css';
+@import 'partials/vendors/slick.css';
+@import 'partials/vendors/slick-theme.css';
+@import 'partials/vendors/typography.css';
+@import 'partials/sections/form.css';
+@import 'partials/sections/header.css';
+@import 'partials/sections/store.css';
+@import 'partials/sections/distribution.css';
+@import 'partials/sections/slider.css';
+@import 'partials/sections/footer.css';
+@import 'partials/sections/bag.css';
+@import 'partials/sections/about.css';
+@import 'partials/sections/product-description.css';
+@import 'partials/sections/login.css';
+@import 'partials/sections/category.css';
+
+
+main {
+    p {
+    	color: #606060;
+        letter-spacing: 0.02rem;
+    }
+}
+
+.wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.logo {
+	display: inline-block;
+	padding: 20px;
+	background-color: #000;
+	z-index: 999;
+	&-link {
+		font-size: 1.15rem;
+		text-decoration: none;
+		color: #fff;
+		text-transform: uppercase;
+	}	
+}

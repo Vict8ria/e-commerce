@@ -1,0 +1,21 @@
+.distribution {
+	&-header {
+		margin-bottom: 0;
+	}
+	&-form {
+		margin-top: 50px;
+		max-width: 580px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 40px auto 0;
+		flex-direction: row;
+	}
+	&-input {
+		margin-top: 0;
+		font-style: italic;
+		border-right: none;
+		width: 90%;
+	}
+}

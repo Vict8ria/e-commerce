@@ -1,0 +1,240 @@
+.store {
+	&--grid	{
+		display: grid;
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+		@media (max-width: $tablet-width)  {
+			grid-template-columns: 1fr;
+		}
+		.store-items {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			@media (max-width: $mobile-mid-width) {
+				grid-template-columns: 1fr;
+			}
+		}
+		.box {
+			position: relative;
+			width: 100%;
+			height: 338px;
+			transition: background-color .5s;
+			&:hover {
+				opacity: 0.8;
+				background-color: $color-main;
+			}
+			&-image {
+				width: 100%;
+			}
+			.content {
+				position: absolute;				
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				width: 100%;
+				box-sizing: border-box;
+				& p {
+					font-size: 24px;
+					font-style: 700;
+					color: #fff;
+					text-transform: uppercase;
+					span {
+						font-style: italic;
+						display: block;
+						font-style: 400;
+						font-family: 'Georgia', serif;
+						font-size: 18px;
+						line-height: 1.8rem;
+					}
+				}
+				.lines {
+					margin-bottom: 15px;
+				}
+				&-small {
+					padding: 0 60px;
+				}
+				&-large {
+					padding: 0 40px;
+				}
+				&-double {
+					padding: 0 60px;
+					margin-top: 50%;
+				}
+				.blockquote {
+					font-size: 14px;
+					position: relative;
+					color: #fff;
+					text-align: center;
+					padding: 50px 70px 0;
+					font-style: italic;
+					font-family: 'Georgia', serif;
+					margin: 10px auto;
+					background: url(../img/socials/twitter-x2.svg) no-repeat 50% 0;
+					@media only screen and (max-width: 1350px) {
+						font-size: 20px;
+						line-height: 30px;
+					}
+					&:before, &:after {
+						content: "";
+						position: absolute;
+						border: 1px solid #fff;
+						height: 22px;
+						top: 5px;
+						transform: rotate(90deg);
+					}
+					&:before {
+						left: 35%;
+					}
+					&:after {
+						right: 35%;
+					}
+				}		
+				.cite {
+					color: #fff;
+					font-weight: 700;
+					font-size: 14px;
+				}
+			}
+		}
+		.left {
+			grid-template-areas: 
+			'a b'
+			'a c'
+			'd e';
+			@media (max-width: $mobile-mid-width) {
+				grid-template-areas: 
+					'a'
+					'b'
+					'c'
+					'd'
+					'e';
+				}
+			.box {
+				&:nth-child(1) {
+					grid-area: a;
+					@media (max-width: $mobile-mid-width) {
+						display: none;
+					}
+				}
+				&:nth-child(2) {
+					overflow: hidden;
+					grid-area: b;
+					@media (max-width: $mobile-mid-width) {
+						display: none;
+					}
+				}
+				&:nth-child(3) {
+					grid-area: c;
+					overflow: hidden;
+				}
+				&:nth-child(4) {
+					grid-area: d;
+					overflow: hidden;
+				}
+				&:nth-child(5) {
+					grid-area: e;
+					overflow: hidden;
+					@media (max-width: $mobile-mid-width) {
+						height: 290px;
+					}
+					
+				}
+			}
+		}
+		.right {
+			grid-template-areas: 
+			'a b'
+			'c d'
+			'e d';
+			@media (max-width: $mobile-mid-width) {
+				grid-template-areas: 
+					'a'
+					'b'
+					'c'
+					'd'
+					'e';
+				}
+			.box {
+				&:nth-child(1) {
+					grid-area: a;
+				}
+				&:nth-child(2) {
+					grid-area: b;
+					overflow: hidden;
+					@media (max-width: $mobile-mid-width) {
+						height: 290px;
+					}
+				}
+				&:nth-child(3) {
+					grid-area: c;
+					overflow: hidden;
+					@media (max-width: $mobile-mid-width) {
+						display: none;
+					}
+				}
+				&:nth-child(4) {
+					grid-area: d;
+					@media (max-width: $mobile-mid-width) {
+						display: none;
+					}
+				}
+				&:nth-child(5) {
+					overflow: hidden;
+					grid-area: e;
+				}
+			}
+		}
+		.bg-color {
+			&-light {
+				background-color: #bbbbbb;
+			}
+			&-dark {
+				background-color: #606060;
+			}
+		}
+		.arrow {
+			display: block;
+			position: relative;
+			margin: 0 60px 20px;
+			top: 2px;
+			width: 2.5em;
+			height: 1em;
+			&:before {
+				top: .5em;
+				width: 2.4em;
+				left: 0;
+				border-top-style: solid;
+				@media (max-width: $mobile-mid-width) {
+					transform: rotate(-90deg);
+					top: 1.4em;
+					left: 0em;
+				}
+			}
+			&:after {
+				width: .6em;
+				height: .6em;
+				top: .19em;
+				left: 0em;
+				border-top-style: solid;
+				border-right-style: solid;
+				transform: rotate(-135deg);
+				@media (max-width: $mobile-mid-width) {
+					transform: rotate(-45deg);
+					left: 0.8em;
+				}
+			}
+			&:before, &:after {
+				position: absolute;
+				content: "";
+				border-width: .2em;
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+
+	
+

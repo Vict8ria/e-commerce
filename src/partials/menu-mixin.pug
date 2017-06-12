@@ -1,0 +1,12 @@
+mixin menu(a)
+	ul.nav-items
+		li.nav-item
+			a.nav-link(href="/woman" class=(a == 'woman' ? 'active' : '') title="Woman") Woman
+		li.nav-item
+			a.nav-link(href="/category/men" class=(a == 'men' ? 'active' : '') title="Men") Men
+		li.nav-item
+			a.nav-link(href="/kids" class=(a == 'kids' ? 'active' : '') title="Kids") Kids
+		li.nav-item
+			a.nav-link(href="/comming-soon" class=(a == 'comming-soon' ? 'active' : '') title="Comming Soon") Comming Soon
+		li.nav-item
+			a.nav-link(href="/about" class=(a == 'about' ? 'active' : '') title="About") About

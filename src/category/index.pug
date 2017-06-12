@@ -1,0 +1,110 @@
+extends ../layout
+
+block head
+	+head({ link: 'category/'}, '')
+
+block menu
+	+menu('')
+
+block body
+	section.category
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				span.breadcrumbs--item Men
+		.coats.category--item
+			.section-header
+				h2.header-name Coats
+				a.more.header-text(href='/') Show more
+			.section-main
+				.products-list
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/1.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/2.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/3.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/4.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+		.outerwear.category--item
+			.section-header
+				h2.header-name Outerwear
+				a.more(href='/') Show more
+			.section-main
+				.products-list
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/5.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/6.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/7.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/8.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+		.t-shirts.category--item
+			.section-header
+				h2.header-name Outerwear
+				a.more(href='/') Show more
+			.section-main
+				.products-list
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/9.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/10.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/11.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+					a.product--item(href="#")
+						.product-image
+							img(src="/assets/img/products/man/12.jpg")
+						.product-info
+							.product-name Double-Layered Top
+							.product-price € 89,95
+	section.slider
+		h3.slider-name Check our lookbook
+		include ../slider.pug		
+
+			

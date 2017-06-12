@@ -1,0 +1,26 @@
+include ../partials/head-mixin
+
+doctype html
+html(lang='en')
+	head
+		block head
+		+head({ link: 'login/'}, 'Sing in')
+	body
+		.login-box
+			a.logo.logo--link(href="/") Sh
+			.login
+				h2.header-name.login-header Sing in
+				form.login-form
+					.col-wrap.column
+						label.label(for="email") E-mail
+						input.input#email
+					.col-wrap.column.no-margin
+						.space-between 
+							label.label(for="password") Password
+							a.color--text(href="/") forgot password
+					.col-wrap.input-area.column.no-margin
+						input.input(type="password")#password
+						span.button-image(onmousedown="showPassword()", onmouseup="hidePassword()")
+					button.button Log in
+					a.no-account--link.color--text(href="/") I don’t have an account
+		script(src="/assets/js/login.js", type="text/javascript")

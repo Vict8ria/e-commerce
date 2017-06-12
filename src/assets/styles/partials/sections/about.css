@@ -1,0 +1,36 @@
+.about-items {
+	display: flex;
+	justify-content: space-between;
+	@media (max-width: $mobile-width) {
+		flex-direction: column;
+	}
+	.about-item {
+		width: 48%;
+		@media (max-width: $mobile-width) {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 80px;
+		}
+		&:last-child {
+			@media (max-width: $mobile-width) {
+				margin-bottom: 0;
+			}
+		}
+		.about-image {
+			width: 100%;
+			margin-bottom: 40px;
+		}
+		.about-name {
+			text-transform: uppercase;
+		}
+		.about-text {
+			line-height: 1.8em;
+			font-size: 14px;
+			letter-spacing: .04em;
+			padding-right: 130px;
+			@media (max-width: $mobile-width) {
+				padding: 0 30px;
+			}
+		}
+	}
+}

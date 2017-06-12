@@ -1,0 +1,178 @@
+extends ../layout
+
+block head
+	+head({ link: 'basket/'}, 'Basket')
+
+block menu
+	+menu()
+
+block body
+	section.shopping-bag
+		.section-header.basket-header
+			h2.header-name Your shopping bag
+			p.header-text Items reserved for limited time only
+		.section-main.basket-main
+			table.table.products-bag--table
+				tr.sections--table
+					th.section-name.product--table Product
+					th.section-name.description--table Description
+					th.section-name.color--table Color
+					th.section-name.size--table Size
+					th.section-name.qty--table Qty
+					th.section-name.amount--table Amount
+					th.section-name.delete--table Delete
+				tr.product-items
+					td.product-item
+						.product-image
+							.image-medium
+								img(src="/assets/img/products/man/1.jpg")
+					td.product-item
+						.product-name Floral Plimsoll
+						.product-article Ref. 2514/302
+						.description-mobile 
+							.color-size
+								p Color:   
+									span One color
+								p Size:
+									span 39
+							.amout
+								span €99,95
+					td.product-item
+						.product-color One color
+					td.product-item
+						.product-size 39
+					td.product-item
+						.product-qty
+							.quantity
+								input(type="number",min="1",max="9",step="1",value="1")
+					td.product-item
+						.product-amount €99,95
+					td.product-item.delete--table
+						button.delete
+				tr.product-items
+					td.product-item
+						.product-image
+							.image-medium
+								img(src="/assets/img/products/man/5.jpg")
+					td.product-item
+						.product-text Coated 5 pocket trousers
+						.product-article Ref. 8246/044
+						.description-mobile 
+							.color-size
+								p Color:   
+									span One color
+								p Size:
+									span M
+							.amout
+								span €169,00
+					td.product-item
+						.product-color One color
+					td.product-item
+						.product-size M
+					td.product-item
+						.product-qty
+							.quantity
+								input(type="number",min="1",max="9",step="1",value="1")
+					td.product-item
+						.product-amount €169,00
+					td.product-item.delete--table
+						button.delete
+				tr.product-items
+					td.product-item
+						.product-image
+							.image-medium
+								img(src="/assets/img/products/man/8.jpg")
+					td.product-item
+						.product-text Oversized studio blouse
+						.product-article Ref. 2401/657
+						.description-mobile 
+							.color-size
+								p Color:   
+									span Black
+								p Size:
+									span S
+							.amout
+								span €299,00
+					td.product-item
+						.product-color Black
+					td.product-item
+						.product-size S
+					td.product-item
+						.product-qty
+							.quantity
+								input(type="number",min="1",max="9",step="1",value="2")
+					td.product-item
+						.product-amount €299,00
+					td.product-item.delete--table
+						button.delete
+				tr.total--table
+					td.total-item(colspan="7")
+						.total-name Subtotal: 
+							span.main-color.total-sum €567,95
+			
+	section.shopping-form
+		form
+			fieldset.fieldset
+				.section-header
+					h2.header-name Shopping address
+					p.header-text All fields are required
+				.section-main
+					.form-wrapper
+						.col-wrap.column
+							label.label Select delivery method
+							select.select
+								option DHL International - €15,00	
+						.col-wrap.m-column
+							.column.col2-4
+								label.label(for="first-name") First name
+								input.input#first-name
+							.column.col2-4
+								label.label(for="last-name") Last name
+								input.input#last-name
+						.col-wrap.column
+							label.label(for="adress-1") Adress 
+								span.label-style (line 1)
+							input.input#adress-1
+						.col-wrap.column
+							label.label(for="adress-2") Adress 
+								span.label-style (line 2)
+							input.input#adress-2
+						.col-wrap.m-column
+							.column.col2-4
+								label.label(for="city") City
+								input.input#city
+							.column.col2-4
+								label.label(for="postal-code") Postal code
+								input.input#postal-code
+						.col-wrap.m-column
+							.column.col2-4
+								label.label(for="phone-number") Phone number
+								input.input#phone-number
+							.column.col2-4
+								label.label(for="email") Email
+								input.input#email
+						.agree
+							input.checkbox-input#agree(type='checkbox') 
+							label.label.checkbox-label(for="agree") Use this address for Billing	
+			fieldset.fieldset
+				.section-header
+					h2.header-name Payment options
+					p.header-text All fields are required
+				.section-main
+					.form-wrapper
+						.payment-items
+							.payment-item 
+								.payment-option Subtotal:
+								.payment-sum €567.95
+							.payment-item 
+								.payment-option Shipping: 
+								.payment-sum €15.00
+							.payment-item.total
+								.payment-option Total: 
+								.payment-sum €582.95
+						.payment-cart
+							.column
+								label.label Select payment method
+								select.select
+									option Credit card
+						button.button Order now

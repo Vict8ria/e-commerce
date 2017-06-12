@@ -1,0 +1,54 @@
+extends ../../../../layout
+
+block head
+	+head({ link: 'category/men/t-shirt/floral-plimsoll'}, 'floral-plimsoll')
+
+block menu
+	+menu('')
+
+block body
+	section.all-description 
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Men 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='/category/men/t-shirt') t-shirt 
+			li.breadcrumbs--items
+				span.breadcrumbs--item floral plimsoll
+		.product-viewer.hover-image
+			img.product-image#productImage(src="/assets/img/product/1.jpg")
+			.viewer-boxes
+				.box-viewer
+					img(src="/assets/img/product/1.jpg", onclick="changeImage(1)")
+				.box-viewer
+					img(src="/assets/img/product/3.jpg", onclick="changeImage(3)")
+				.box-viewer
+					img(src="/assets/img/product/2.jpg", onclick="changeImage(2)")
+		.product-description
+			.product-name Floral plimsoll
+			.article Article number: 14210160762
+			.price € 99,95
+			.description-text
+				| Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. 
+				br
+				| Maecenas malesuada elit lectus felis, malesuada ultricies. 
+			.size--items
+				h4.h4 size
+				form.sizes
+					input.size-number(id="size-38", type="radio", value="38", name="size") 
+					label.size-name(for="size-38") 38
+					input.size-number(id="size-39", type="radio", value="39", name="size") 
+					label.size-name(for="size-39") 39
+					input.size-number(id="size-40", type="radio", value="40", name="size") 
+					label.size-name(for="size-40") 40
+					input.size-number(id="size-41", type="radio", value="41", name="size") 
+					label.size-name(for="size-41") 41
+					input.size-number(id="size-42", type="radio", value="42", name="size") 
+					label.size-name(for="size-42") 42
+			button.button.btn-description Add to card
+	section.slider
+		h3.slider-name You may also like
+		include ../../../../slider.pug
+		span.more-button Show me more related clothes

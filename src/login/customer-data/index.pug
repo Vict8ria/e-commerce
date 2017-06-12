@@ -1,0 +1,63 @@
+extends ../../layout
+
+block head
+	+head({ link: 'customer-data/'}, 'Edit Account')
+
+block menu
+	+menu('')
+
+block body
+	section.edit-account
+		ul.breadcrumbs 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Home 
+			li.breadcrumbs--items
+				a.breadcrumbs--item(href='../') Account 
+			li.breadcrumbs--items
+				span.breadcrumbs--item Edit you account
+		.section-header
+			h2.header-name Edit your account
+		.section-main
+			form
+				.edit-account--form.form-wrapper
+					.col-wrap.m-column
+						.column.col2-4 
+							label.label(for="first-name") First name
+							input.input#first-name
+						.column.col2-4 
+							label.label(for="last-name") Last name
+							input.input#last-name
+					.col-wrap.m-column
+						.col3-4.column
+							label.label(for="company-name") Company name 
+								span.label-style (optional)
+							input.input#company-name
+						.col1-4.column
+							label.label(for="nip") Nip 
+								span.label-style (optional)
+							input.input#nip
+					.col-wrap.column
+						label.label(for="adress") Adress 
+						input.input#adress
+					.col-wrap.m-column
+						.column.col2-4 
+							label.label(for="city") City
+							input.input#city
+						.column.col2-4 
+							label.label(for="zip-code") Zip code
+							input.input#zip-code
+					.col-wrap.column
+						label.label Country
+						select.select
+							option Poland
+					.col-wrap.m-column.no-margin
+						.column.col2-4 
+							label.label(for="phone-number") Phone number
+							input.input#phone-number
+						.column.col2-4
+							label.label(for="email") Email
+							input.input#email
+					.agree
+						input.checkbox-input#agree(type='checkbox') 
+						label.checkbox-label(for="agree") Use this address for Billing	
+					buttom.button Save

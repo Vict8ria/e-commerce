@@ -1,0 +1,195 @@
+.shopping {
+	&-bag {
+		position: relative;
+		.basket-main {
+			position: relative;
+			.products-bag--table {
+				margin-bottom: 160px;
+				position: relative;
+				td {
+					vertical-align: middle;
+				}
+				&:after {
+					position: absolute;
+					content: url('../img/icons/lines.png');
+					bottom: -100px;
+					left: 48%;
+				}
+				.product-item {
+					padding: 15px;
+				}
+				.total {
+					&-item {
+						text-align: right;
+						padding: 20px 60px 20px 20px;
+						padding-right: 40px;
+						background-color: #F9F9F9;
+						position: relative;
+						.product-qty:before, .product-qty:after {
+							position: absolute;
+						}
+						.product-qty:before {
+							content: "a";
+							top: 0;
+							right: 0;
+						}
+						.product-qty:after {
+							content: "g";
+							top: 10px;
+							right: 0;
+						}
+					}
+					.total-sum {
+						margin-left: 15px;
+					}
+				}
+			}
+		}
+	}
+	&-form {
+		.fieldset {
+			position: relative;
+			margin-bottom: 180px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&:first-child:after {
+				content: url('../img/icons/lines.png');
+				position: absolute;
+				bottom: -100px;
+				left: 48%;
+			}
+		}
+		.section-main {
+			.select option {
+				padding: 10px;
+			}
+			.payment-items {
+				margin-bottom: 100px;
+				width: 100%;
+				.payment-item {
+					font-family: 'Georgia', serif;
+					font-size: 18px;
+					list-style: none;
+					margin: 20px 0;
+					display: flex;
+					.payment-option {
+						text-align: right;
+						width: 50%;
+						padding-right: 10px;
+						@media (max-width: $mobile-mid-width) {
+							font-size: 24px;
+						}
+					}
+					.payment-sum {
+						font-style: italic;
+						width: 50%;
+						padding-left: 10px;
+						@media (max-width: $mobile-mid-width) {
+							font-size: 24px;
+						}
+					}
+				}
+			}
+			.total {
+				color: $color-main;
+			}
+			.payment-cart {
+				position: relative;
+				width: 100%;
+				&:before, &:after {
+					position: absolute;
+					content: "";
+					top: 28px;
+					z-index: 2;
+				}
+				&:before {
+					content: url(../img/icons/mastercard.svg);
+					right: 40px;
+				}
+				&:after {
+					content: url(../img/icons/visa.svg);
+					right: 90px;
+				}
+			}
+		}
+	} 
+}
+
+
+
+
+
+
+.quantity {
+	position: relative;
+	input {
+		width: 30px;
+		height: 34px;
+		line-height: 1.65;
+		float: left;
+		display: block;
+		padding: 0;
+		margin: 0;
+		padding-right: 6px;
+		border: 1px solid #fff;
+		&[type=number]::-webkit-inner-spin-button,
+		&[type=number]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+		&[type=number]{
+		  -moz-appearance: textfield;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+	&-nav {
+		float: left;
+		position: relative;
+		height: 34px;
+	}
+	&-button {
+		position: relative;
+		cursor: pointer;
+		border-left: 1px solid #eee;
+		width: 16px;
+		text-align: center;
+		color: #333;
+		font-size: 14px;
+		font-family: "Trebuchet MS", Helvetica, sans-serif !important;
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+		color: #fff;
+		background-color: #000;
+	}
+	.quantity-up {
+		position: absolute;
+		height: 48%;
+		top: 0;
+		line-height: 1.1;
+	}
+	.quantity-down {
+		position: absolute;
+		height: 48%;
+		bottom: -1px;
+		line-height: 1.0;
+	}
+}
+
+
+
+
+		
+
+			
+
+
+
+

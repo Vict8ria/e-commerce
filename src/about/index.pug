@@ -1,0 +1,33 @@
+extends ../layout
+
+block head
+	+head({ link: 'about/'}, 'About')
+
+block menu
+	+menu('')
+
+block body
+	section.about
+		.section-header
+			h2.header-name About
+			p.header-text Lorem ipsum dolor sit amet enim. Etiam ullamcorp uspendisse a pellentesque.
+		.section-main
+			.about-items
+				.about-item
+					img.about-image(src="/assets/img/about/about.jpg")
+					h3.about-name Who we are?
+					p.about-text
+						| Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. 
+
+					p.about-text
+						| Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend 
+				.about-item
+					img.about-image(src="/assets/img/about/about-2.jpg")
+					h3.about-name What we are doing?
+					p.about-text
+						| Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim. 
+					p.about-text
+						| Phasellus fermentum in, dolor. Pellentesque facilisis. Nulla imperdiet sit amet magna. Vestibulum dapibus, mauris nec malesuada fames ac turpis velit, rhoncus eu, luctus et interdum adipiscing wisi. Aliquam erat ac ipsum. Integer aliquam purus. Quisque lorem tortor fringilla sed, vestibulum id, eleifend 
+	section.slider
+		h3.slider-name You make also like
+		include ../slider.pug	
